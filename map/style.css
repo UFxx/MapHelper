@@ -1,0 +1,41 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #171717;
+}
+
+canvas {
+  background-color: #aaaaaa30;
+}
+
+input {
+  margin-top: 20px;
+  color: white;
+}
+
+#upload-map-input {
+  display: none;
+}
+
+#upload-map-input + label {
+  width: 150px;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 20px;
+  font-size: 20px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: white;
+  cursor: pointer;
+
+  transition: 0.3s ease background-color;
+}
+
+#upload-map-input + label:hover {
+  background-color: #aaaaaa20;
+}
