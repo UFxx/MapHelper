@@ -4,12 +4,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="starter-menu.css" />
     <title>Карта</title>
   </head>
   <body>
-    <canvas moz-opaque width="1536px" height="640px"> </canvas>
+    <div class="starter-menu">
+      <h2>Добро пожаловать в MapHelper!<br />Выберите подходящие настройки:</h2>
+      <div class="starter-menu-settings">
+        <div>
+          <input
+            type="range"
+            name=""
+            id="starter-menu-input-range"
+            value="1"
+            step="1"
+            max="6"
+          />
+          <label for="starter-menu-input-range"
+            >Количество игроков: <span id="players-count"></span
+          ></label>
+        </div>
+        <button id="accept-settings">Продолжить</button>
+      </div>
+    </div>
+    <canvas moz-opaque width="1536px" height="640px"></canvas>
     <input type="file" name="" id="upload-map-input" />
-    <label for="upload-map-input">Выберите карту</label>
+    <label for="upload-map-input">Выбрать карту</label>
+    <div class="movable-div"></div>
   </body>
-  <script src="main.js"></script>
+  <script src="starterMenu.js"></script>
+  <script src="addBackground.js"></script>
+  <script src="moveImg.js"></script>
 </html>

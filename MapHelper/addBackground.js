@@ -1,6 +1,5 @@
 const input = document.querySelector("#upload-map-input");
 const canvas = document.querySelector("canvas");
-const el = document.querySelector('canvas div')
 const context = canvas.getContext("2d");
 const img = new Image();
 
@@ -15,9 +14,3 @@ input.addEventListener("change", () => {
   };
   fileReader.readAsDataURL(input.files[0]);
 });
-
-// Get cursor postion
-canvas.addEventListener('mousemove', (e) => {
-    const rect = canvas.getBoundingClientRect();
-    console.log(`X: ${e.clientX - rect.left} Y: ${e.clientY - rect.top}`)
-})
