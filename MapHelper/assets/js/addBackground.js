@@ -3,6 +3,9 @@ const canvas = document.querySelector("canvas");
 const context = canvas.getContext("2d");
 const img = new Image();
 
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
 // Add background img on canvas
 input.addEventListener("change", () => {
   const fileReader = new FileReader();

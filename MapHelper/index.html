@@ -3,36 +3,46 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="starter-menu.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
     <title>Карта</title>
   </head>
   <body>
-    <div class="starter-menu">
-      <h2>Добро пожаловать в MapHelper!<br />Выберите подходящие настройки:</h2>
-      <div class="starter-menu-settings">
-        <div>
-          <input
-            type="range"
-            name=""
-            id="starter-menu-input-range"
-            value="1"
-            step="1"
-            max="6"
-          />
-          <label for="starter-menu-input-range"
-            >Количество игроков: <span id="players-count"></span
-          ></label>
-        </div>
-        <button id="accept-settings">Продолжить</button>
+    <canvas moz-opaque width="1536px" height="640px"></canvas>
+
+    <div class="player-figure player-red"></div>
+    <div class="player-figure player-blue"></div>
+    <div class="player-figure player-green"></div>
+    <div class="player-figure player-orange"></div>
+    <div class="player-figure player-violet"></div>
+    <div class="player-figure player-gray"></div>
+
+    <img
+      id="open-settings-icon"
+      src="assets/img/settings-icon.png"
+      alt="open settings icon"
+    />
+
+    <div class="settings-modal settings-modal__hidden">
+      <img
+        id="close-settings-icon"
+        src="assets/img/close-settings-icon.png"
+        alt="close settings icon"
+      />
+
+      <div class="add-players-buttons">
+        <button>Добавить красного</button>
+        <button>Добавить синего</button>
+        <button>Добавить зеленого</button>
+        <button>Добавить оранжевого</button>
+        <button>Добавить фиолетового</button>
+        <button>Добавить серого</button>
+        <input type="file" id="upload-map-input" />
+        <label for="upload-map-input">Выбрать карту</label>
       </div>
     </div>
-    <canvas moz-opaque width="1536px" height="640px"></canvas>
-    <input type="file" name="" id="upload-map-input" />
-    <label for="upload-map-input">Выбрать карту</label>
-    <div class="movable-div"></div>
   </body>
-  <script src="starterMenu.js"></script>
-  <script src="addBackground.js"></script>
-  <script src="moveImg.js"></script>
+  <script src="assets/js/addBackground.js"></script>
+  <script src="assets/js/movePlayers.js"></script>
+  <script src="assets/js/addPlayers.js"></script>
+  <script src="assets/js/settings.js"></script>
 </html>
