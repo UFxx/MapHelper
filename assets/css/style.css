@@ -1,0 +1,153 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #171717;
+  overflow: hidden;
+}
+
+canvas {
+  background-color: #aaaaaa30;
+}
+
+input {
+  color: white;
+}
+
+#upload-map-input {
+  display: none;
+}
+
+#upload-map-input + label {
+  width: 135px;
+  padding: 13px;
+  margin-left: 35px;
+  border-radius: 20px;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+
+  transition: 0.3s ease background-color;
+}
+
+#upload-map-input + label:hover {
+  background-color: #aaaaaa20;
+}
+
+.player-figure {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 100%;
+  border: 2px solid black;
+  width: 20px;
+  height: 20px;
+}
+
+.player-red {
+  display: none;
+  background-color: red;
+}
+
+.player-blue {
+  display: none;
+  background-color: blue;
+}
+
+.player-green {
+  display: none;
+  background-color: green;
+}
+
+.player-orange {
+  display: none;
+  background-color: orange;
+}
+
+.player-violet {
+  display: none;
+  background-color: violet;
+}
+
+.player-gray {
+  display: none;
+  background-color: gray;
+}
+
+.player__active {
+  border: 2px solid white;
+}
+
+.player__visible {
+  display: block;
+}
+
+.add-players-buttons {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  justify-content: space-between;
+}
+
+.add-players-buttons button {
+  font-size: 18px;
+  background-color: transparent;
+  padding: 7px 20px;
+  color: white;
+  border: 2px solid white;
+  cursor: pointer;
+}
+
+#open-settings-icon {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.settings-modal {
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  width: 274px;
+  height: 488px;
+  padding: 50px 20px 20px 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  background-color: #171717;
+  border-radius: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+
+  transition: 0.3s ease width, 0.3s ease height, 0.3s ease padding;
+}
+
+.settings-modal__hidden {
+  padding: 0;
+  width: 0;
+  height: 0;
+}
+
+#close-settings-icon {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+
+  transition: 0.3s ease transform;
+}
+
+#close-settings-icon:hover {
+  transform: rotate(-90deg);
+}
