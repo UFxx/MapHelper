@@ -1,0 +1,23 @@
+.markers {
+  position: absolute;
+  top: 25px;
+}
+
+.marker {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+}
+
+.marker input {
+  position: absolute;
+  background-color: transparent;
+  top: 120%;
+  left: -40px;
+  width: 100px;
+  text-align: center;
+  border: none;
+}

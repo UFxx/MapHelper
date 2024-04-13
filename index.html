@@ -3,18 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/players.css" />
+    <link rel="stylesheet" href="assets/css/markers.css" />
+    <link rel="stylesheet" href="assets/css/settings.css" />
+    <link rel="stylesheet" href="assets/css/info.css" />
+
     <title>Карта</title>
   </head>
   <body>
     <canvas moz-opaque width="1536px" height="640px"></canvas>
 
-    <div class="player-figure player-red"></div>
-    <div class="player-figure player-blue"></div>
-    <div class="player-figure player-green"></div>
-    <div class="player-figure player-orange"></div>
-    <div class="player-figure player-violet"></div>
-    <div class="player-figure player-gray"></div>
+    <div class="players">
+      <div class="player-figure player-red">
+        <input type="text" id="player-figure-name-1" value="Имя" />
+      </div>
+      <div class="player-figure player-blue">
+        <input type="text" id="player-figure-name-2" value="Имя" />
+      </div>
+      <div class="player-figure player-green">
+        <input type="text" id="player-figure-name-3" value="Имя" />
+      </div>
+      <div class="player-figure player-orange">
+        <input type="text" id="player-figure-name-4" value="Имя" />
+      </div>
+      <div class="player-figure player-violet">
+        <input type="text" id="player-figure-name-5" value="Имя" />
+      </div>
+      <div class="player-figure player-gray">
+        <input type="text" id="player-figure-name-6" value="Имя" />
+      </div>
+    </div>
+
+    <div class="markers"></div>
 
     <img
       id="open-settings-icon"
@@ -22,10 +45,16 @@
       alt="open settings icon"
     />
 
+    <img
+      id="open-info-icon"
+      src="assets/img/open-info-icon.png"
+      alt="open info icon"
+    />
+
     <div class="settings-modal settings-modal__hidden">
       <img
         id="close-settings-icon"
-        src="assets/img/close-settings-icon.png"
+        src="assets/img/close-icon.png"
         alt="close settings icon"
       />
 
@@ -40,9 +69,31 @@
         <label for="upload-map-input">Выбрать карту</label>
       </div>
     </div>
+
+    <div class="info-modal-bg info-modal-bg__hidden">
+      <div class="info-modal">
+        <img
+          src="assets/img/close-icon.png"
+          id="close-info-icon"
+          alt="close-info-icon"
+        />
+
+        <h2>Инструкция</h2>
+        <div class="info-content">
+          Добавить игроков можно в настройках.<br /><br />
+          Перемещение игроков производится нажатием на игрока, затем нажатием на место,
+          куда его нужно переместить. Снять выделение можно нажатием ПКМ в любом месте.<br /><br />
+          Метки добавляются путем зажатия "Shift" + клик на нужное место.<br /><br />
+          Можно переименовывать как игроков так и метки нажатием на текст под
+          ними.
+        </div>
+      </div>
+    </div>
   </body>
   <script src="assets/js/addBackground.js"></script>
   <script src="assets/js/movePlayers.js"></script>
   <script src="assets/js/addPlayers.js"></script>
+  <script src="assets/js/addMarker.js"></script>
   <script src="assets/js/settings.js"></script>
+  <script src="assets/js/info.js"></script>
 </html>
