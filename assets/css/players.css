@@ -1,0 +1,57 @@
+.player-figure {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 100%;
+  border: 2px solid black;
+  width: 20px;
+  height: 20px;
+}
+
+.player-figure input {
+  position: absolute;
+  top: 120%;
+  width: 100px;
+  left: -40px;
+  border: none;
+  text-align: center;
+  background-color: transparent;
+}
+
+.player-red {
+  display: none;
+  background-color: red;
+}
+
+.player-blue {
+  display: none;
+  background-color: blue;
+}
+
+.player-green {
+  display: none;
+  background-color: green;
+}
+
+.player-orange {
+  display: none;
+  background-color: orange;
+}
+
+.player-violet {
+  display: none;
+  background-color: violet;
+}
+
+.player-gray {
+  display: none;
+  background-color: gray;
+}
+
+.player__active {
+  border: 2px solid white;
+}
+
+.player__visible {
+  display: block;
+}
