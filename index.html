@@ -52,6 +52,7 @@
     />
 
     <div class="settings-modal settings-modal__hidden">
+      <h2 class="settings-modal-title">Настройки</h2>
       <img
         id="close-settings-icon"
         src="assets/img/close-icon.png"
@@ -59,14 +60,22 @@
       />
 
       <div class="add-players-buttons">
-        <button>Добавить красного</button>
-        <button>Добавить синего</button>
-        <button>Добавить зеленого</button>
-        <button>Добавить оранжевого</button>
-        <button>Добавить фиолетового</button>
-        <button>Добавить серого</button>
+        <h2>Игроки</h2>
+        <button class="add-red-player-button">Добавить красного</button>
+        <button class="add-blue-player-button">Добавить синего</button>
+        <button class="add-green-player-button">Добавить зеленого</button>
+        <button class="add-orange-player-button">Добавить оранжевого</button>
+        <button class="add-violet-player-button">Добавить фиолетового</button>
+        <button class="add-gray-player-button">Добавить серого</button>
+      </div>
+
+      <div class="other-buttons">
+        <h2 class="other-buttons-title">Кнопки</h2>
         <input type="file" id="upload-map-input" />
         <label for="upload-map-input">Выбрать карту</label>
+        <button>Очистить карту</button>
+        <button>Сбросить игроков</button>
+        <button>Удалить метки</button>
       </div>
     </div>
 
@@ -81,8 +90,9 @@
         <h2>Инструкция</h2>
         <div class="info-content">
           Добавить игроков можно в настройках.<br /><br />
-          Перемещение игроков производится нажатием на игрока, затем нажатием на место,
-          куда его нужно переместить. Снять выделение можно нажатием ПКМ в любом месте.<br /><br />
+          Перемещение игроков производится нажатием на игрока, затем нажатием на
+          место, куда его нужно переместить. Снять выделение можно нажатием ПКМ
+          в любом месте.<br /><br />
           Метки добавляются путем зажатия "Shift" + клик на нужное место.<br /><br />
           Можно переименовывать как игроков так и метки нажатием на текст под
           ними.

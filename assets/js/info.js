@@ -11,10 +11,14 @@ openInfoIcon.addEventListener("click", () => {
   }, 300);
 });
 
-closeInfoIcon.addEventListener("click", () => {
+const closeInfo = () => {
   infoModal.style.transform = "translateY(50px)";
   infoModal.style.opacity = 0;
   setTimeout(() => {
     infoBg.classList.add("info-modal-bg__hidden");
   }, 300);
+};
+
+closeInfoIcon.addEventListener("click", () => {
+  closeInfo();
 });

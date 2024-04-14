@@ -12,6 +12,16 @@
   color: white;
   border: 2px solid white;
   cursor: pointer;
+  border-radius: 0;
+  box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.2);
+
+  transition: 0.3s ease transform, 0.3s ease box-shadow,
+    0.3s ease background-color;
+}
+
+.add-players-buttons button:hover {
+  transform: translateY(4px);
+  box-shadow: none;
 }
 
 #open-settings-icon {
@@ -25,26 +35,33 @@
 
 .settings-modal {
   position: absolute;
-  top: 30px;
-  right: 20px;
-  width: 274px;
-  height: 488px;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 100svh;
   padding: 50px 20px 20px 20px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   background-color: #171717;
-  border-radius: 20px;
-  overflow: hidden;
+  border-radius: 20px 0 0 20px;
   white-space: nowrap;
+  overflow: hidden;
 
-  transition: 0.3s ease width, 0.3s ease height, 0.3s ease padding;
+  transition: 0.3s ease width, 0.3s ease padding;
+}
+
+.settings-modal-title {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
 }
 
 .settings-modal__hidden {
   padding: 0;
   width: 0;
-  height: 0;
 }
 
 #close-settings-icon {
@@ -60,4 +77,66 @@
 
 #close-settings-icon:hover {
   transform: rotate(-90deg);
+}
+
+#upload-map-input {
+  display: none;
+}
+
+#upload-map-input + label {
+  width: 125px;
+  padding: 7px 20px;
+  border-radius: 20px;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+
+  transition: 0.3s ease background-color;
+}
+
+#upload-map-input + label:hover {
+  background-color: #aaaaaa20;
+}
+
+.other-buttons {
+  position: relative;
+  margin-top: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  row-gap: 15px;
+}
+
+.add-players-buttons h2 {
+  text-align: center;
+  color: white;
+  font-size: 20px;
+}
+
+.other-buttons h2 {
+  position: absolute;
+  top: -40px;
+  color: white;
+  font-size: 20px;
+}
+
+/* Active players buttons color */
+.add-players-buttons .add-red-player-button__active {
+  background-color: rgba(255, 0, 0, 0.5);
+}
+.add-players-buttons .add-blue-player-button__active {
+  background-color: rgba(0, 0, 255, 0.5);
+}
+.add-players-buttons .add-green-player-button__active {
+  background-color: rgba(0, 255, 0, 0.5);
+}
+.add-players-buttons .add-orange-player-button__active {
+  background-color: rgba(255, 166, 0, 0.5);
+}
+.add-players-buttons .add-violet-player-button__active {
+  background-color: rgba(238, 130, 238, 0.5);
+}
+.add-players-buttons .add-gray-player-button__active {
+  background-color: rgba(128, 128, 128, 0.5);
 }
