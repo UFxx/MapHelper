@@ -47,6 +47,9 @@
 }
 
 .info-content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
   margin-top: 20px;
   color: white;
   font-size: 20px;

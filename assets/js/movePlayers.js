@@ -16,6 +16,13 @@ players.forEach((el) => {
   });
 });
 
+const unactivatePlayer = () => {
+  players.forEach((el) => {
+    el.classList.remove("player__active");
+  });
+  activePlayer = null;
+};
+
 // Move players
 canvas.addEventListener("click", (e) => {
   const rect = canvas.getBoundingClientRect();
@@ -23,13 +30,18 @@ canvas.addEventListener("click", (e) => {
     e.clientX - rect.left - activePlayer.clientWidth / 2 + "px";
   activePlayer.style.top =
     e.clientY - rect.top - activePlayer.clientHeight / 2 + "px";
+
+  unactivatePlayer();
 });
 
 // Delete "player__active" on RMB click
-window.addEventListener("contextmenu", function (e) {
+window.addEventListener("contextmenu", (e) => {
   e.preventDefault();
-  players.forEach((el) => {
-    el.classList.remove("player__active");
-  });
-  activePlayer = null;
+  unactivatePlayer();
+});
+
+window.addEventListener("keyup", (e) => {
+  if ((e.key = "Escape")) {
+    unactivatePlayer();
+  }
 });

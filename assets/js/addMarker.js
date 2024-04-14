@@ -1,7 +1,6 @@
 const markersContainer = document.querySelector(".markers");
 
 document.addEventListener("click", function (e) {
-  e.preventDefault();
   if (e.shiftKey) {
     const rect = canvas.getBoundingClientRect();
 
