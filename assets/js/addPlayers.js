@@ -8,10 +8,9 @@ buttons.forEach((el, index) => {
         el.classList[0].split("-")[1]
       }-player-button__active`;
 
-      // index is button[i]
+      // index is number in button[i]
       if (index === i) {
         players[i].classList.toggle("player__visible");
-        console.log(playerColor);
         buttons[index].classList.toggle(`${playerColor}`);
       }
     }

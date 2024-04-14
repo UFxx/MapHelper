@@ -41,8 +41,7 @@ window.addEventListener("contextmenu", (e) => {
 });
 
 window.addEventListener("keyup", (e) => {
-  e.preventDefault();
-  if (e.key = 'Escape') {
+  if ((e.key = "Escape")) {
     unactivatePlayer();
   }
 });
