@@ -4,18 +4,19 @@ document.addEventListener("click", function (e) {
   if (e.shiftKey) {
     const rect = canvas.getBoundingClientRect();
 
-    const randomColorRed = Math.floor(Math.random() * 255);
-    const randomColorGreen = Math.floor(Math.random() * 255);
-    const randomColorBlue = Math.floor(Math.random() * 255);
+    const randomMarkerBackgroungColor = `rgb(${Math.floor(
+      Math.random() * 255
+    )}, ${Math.floor(Math.random() * 255)}, ${Math.floor(
+      Math.random() * 255
+    )})`;
 
     const marker = document.createElement("div");
     const markerName = document.createElement("input");
 
     markerName.setAttribute("type", "text");
     markerName.setAttribute("value", "Метка");
-    markerName.setAttribute("disabled", "");
     marker.classList.add("marker");
-    marker.style.backgroundColor = `rgb(${randomColorRed}, ${randomColorGreen}, ${randomColorBlue})`;
+    marker.style.backgroundColor = randomMarkerBackgroungColor;
 
     marker.appendChild(markerName);
     markersContainer.appendChild(marker);
@@ -52,8 +53,6 @@ document.addEventListener("click", function (e) {
     // Delete marker button (marker settings)
     markerDeleteButton.addEventListener("click", () => {
       const activeMarker = document.querySelector(".marker__active");
-      // activeMarker.classList[1] is ".marker__active"
-      activeMarker.classList[1] = null;
       activeMarker.style.transform = "scale(0.001)";
       markerSettingsModal.classList.add("marker-settings-modal-window__hidden");
 
@@ -65,21 +64,29 @@ document.addEventListener("click", function (e) {
     const markerRenameButton = document.querySelector(
       ".marker-modal-window-rename-button"
     );
+
     markerRenameButton.addEventListener("click", () => {
       const activeMarker = document.querySelector(".marker__active");
       // activeMarker.chilren[0] is input in .marker
-      activeMarker.children[0].removeAttribute("disabled");
-      activeMarker.children[0].focus();
       markerSettingsModal.classList.add("marker-settings-modal-window__hidden");
+      activeMarker.children[0].focus();
 
       // blur input on press "Enter" and unactivate marker
       activeMarker.children[0].addEventListener("keypress", (e) => {
-        if ((e.key = "Enter")) {
+        if (e.key == "Enter") {
           activeMarker.children[0].blur();
-          activeMarker.children[0].setAttribute("disabled", "");
           activeMarker.classList.remove("marker__active");
         }
       });
+    });
+
+    const markerCancelButton = document.querySelector(
+      ".marker-modal-window-cancel-button"
+    );
+    markerCancelButton.addEventListener("click", () => {
+      const activeMarker = document.querySelector(".marker__active");
+      activeMarker.classList.remove("marker__active");
+      markerSettingsModal.classList.add("marker-settings-modal-window__hidden");
     });
   }
 });
