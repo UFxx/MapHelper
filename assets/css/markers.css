@@ -10,6 +10,8 @@
   border: 2px solid black;
   display: flex;
   align-items: center;
+
+  transition: 0.3s ease transform;
 }
 
 .marker input {
@@ -20,4 +22,50 @@
   width: 100px;
   text-align: center;
   border: none;
+}
+
+.marker-settings-modal-window {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 150px;
+  padding: 10px 0;
+  background-color: #17171748;
+  border-radius: 10px;
+  color: white;
+  font-size: 18px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  column-gap: 10px;
+
+  overflow: hidden;
+  transition: 0.3s ease padding, 0.3s ease width, 0.3s ease height;
+}
+
+.marker-settings-modal-window p {
+  width: 100%;
+  height: 20px;
+  text-align: center;
+  padding: 10px 0 10px 0;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.451);
+  border-top: 1px solid rgba(128, 128, 128, 0.451);
+  cursor: pointer;
+
+  transition: 0.3s ease background-color;
+}
+
+.marker-settings-modal-window p:hover {
+  background-color: black;
+}
+
+.marker-settings-modal-window__hidden {
+  padding: 0;
+  width: 0;
+  height: 0;
+}
+
+.marker__active {
+  border: 2px solid white;
 }
